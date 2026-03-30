@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EstateX | Institutional Web3 Property Ecosystem</title>
+    <title>EstateX | SkyNest Case Study</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,10 +19,10 @@
         <a class="brand" href="#top">EstateX</a>
         <nav class="nav">
           <a href="#overview" class="scroll-link">Overview</a>
-          <a href="#services" class="scroll-link">Services</a>
-          <a href="#journey" class="scroll-link">Journey</a>
-          <a href="#bidi" class="scroll-link">BIDT</a>
-          <a href="#cta" class="scroll-link">Partnership</a>
+          <a href="#case" class="scroll-link">Case Study</a>
+          <a href="#layers" class="scroll-link">Platform Layers</a>
+          <a href="#bidi" class="scroll-link">Framework</a>
+          <a href="#cta" class="scroll-link">Contact</a>
         </nav>
         <button class="nav-toggle" aria-label="Open navigation">Menu</button>
       </div>
@@ -30,208 +30,360 @@
 
     <main id="top">
       <section class="hero" data-reveal>
-        <div class="shell hero-grid">
+        <div class="shell hero-grid hero-grid-editorial">
           <article class="hero-main">
-            <p class="eyebrow">EstateX | Institutional Web3 Property Ecosystem</p>
-            <h1>Our Platform Turns Real Estate into a Structured, Programmable Financial Asset</h1>
+            <p class="eyebrow">EstateX Case Study</p>
+            <h1>From Building Conversion to Recurring Income</h1>
             <p class="lead">
-              Our solution connects tokenized financing, property services, and rental operations in one integrated
-              operating stack. Instead of isolated products, we deliver a single execution layer for the full
-              lifecycle of real assets.
+              SkyNest Serviced Apartments shows how EstateX turns one property project into a connected Web3 business
+              flow — funding the conversion, preparing the apartments, and moving the asset into live rental revenue.
             </p>
             <div class="hero-actions">
-              <a href="#services" class="button solid scroll-link">Explore the Three Services</a>
-              <a href="#journey" class="button ghost scroll-link">View the Operating Flow</a>
+              <a href="#case" class="button solid scroll-link">Read the Case Study</a>
+              <a href="#layers" class="button ghost scroll-link">Explore the Platform Layers</a>
             </div>
             <ul class="hero-meta">
-              <li>Built for institutional investors, developers, and operating partners</li>
-              <li>Compliance controls, smart contracts, and end-to-end traceability by design</li>
+              <li>Case focus: serviced apartment conversion into a bookable short-stay asset</li>
+              <li>Execution model: PropFinX → HomeChain Store → StayLedger</li>
             </ul>
           </article>
-          <aside class="hero-aside">
-            <svg viewBox="0 0 320 220" aria-hidden="true">
-              <rect x="16" y="28" width="86" height="156" rx="14"></rect>
-              <rect x="118" y="18" width="92" height="166" rx="14"></rect>
-              <rect x="228" y="44" width="76" height="140" rx="14"></rect>
-              <path d="M20 198h286"></path>
-              <path d="M40 98h52M138 82h52M244 114h44"></path>
-            </svg>
+          <aside class="hero-aside premium-card">
+            <div class="flow-diagram">
+              <div class="flow-box top-box is-current" data-layer="propfinx">PropFinX: Capital Layer</div>
+              <div class="flow-box middle-box" data-layer="homechain">HomeChain: Service Layer</div>
+              <div class="flow-box bottom-box" data-layer="stayledger">StayLedger: Operating Layer</div>
+            </div>
             <div class="aside-note">
-              <p>Our Operating Pattern</p>
+              <p>Continuous Value Flow</p>
               <h3>Finance → Service → Operation</h3>
-              <ul>
-                <li>Our finance layer structures compliant capital entry</li>
-                <li>Our service layer activates assets for real-world use</li>
-                <li>Our operations layer converts usage into recurring revenue</li>
-              </ul>
             </div>
           </aside>
         </div>
       </section>
 
-      <section id="overview" class="section" data-reveal>
-        <div class="shell text-flow">
-          <header class="section-head">
-            <p>Market Problem</p>
-            <h2>Why Our Solution Is Built as a Closed Loop</h2>
-          </header>
-          <p>
-            Traditional property projects face high friction and low liquidity in financing, fragmented procurement
-            and fulfillment in service delivery, and weak transparency in deposits, payouts, and operating data.
-            Together, these constraints reduce asset efficiency and slow value realization.
-          </p>
-          <p>
-            Our platform is not designed as a token experiment. Our architecture places
-            <strong>capital formation</strong>, <strong>service fulfillment</strong>, and
-            <strong>operational monetization</strong> inside one verifiable rule set, where smart contracts
-            turn cross-party coordination into executable workflows.
-          </p>
-          <div class="long-divider"></div>
-          <blockquote>
-            Our commercial thesis is simple: structure capital, activate the asset, and convert operations into durable cash flow.
-          </blockquote>
-        </div>
-      </section>
-
-      <section id="services" class="section" data-reveal>
-        <div class="shell">
-          <header class="section-head">
-            <p>Our Services</p>
-            <h2>Three Services, One Institutional Execution Stack</h2>
-          </header>
-          <div class="service-tabs" role="tablist" aria-label="Service switcher">
-            <button class="tab is-active" data-tab="propfinx" aria-selected="true">PropFinX</button>
-            <button class="tab" data-tab="homechain" aria-selected="false">HomeChain Store</button>
-            <button class="tab" data-tab="stayledger" aria-selected="false">StayLedger</button>
+      <section id="overview" class="section section-divided" data-reveal>
+        <div class="shell editorial-split">
+          <div class="editorial-heading">
+            <p class="section-kicker">Why SkyNest Needs EstateX</p>
+            <h2>A property project only becomes valuable when capital, delivery, and operations stay connected.</h2>
           </div>
-
-          <div class="service-panel is-active" data-panel="propfinx">
-            <h3>PropFinX — Web3 Real Estate Finance</h3>
-            <p>
-              Our finance service tokenizes selected financing rights and embeds compliance checks, issuance logic,
-              custody, and transfer constraints into smart contracts. It gives sponsors and investors a controlled,
-              transparent framework for capital participation.
-            </p>
-            <ul>
-              <li>Project intake, due diligence, and compliance approval</li>
-              <li>Investor onboarding with KYC / AML / whitelist checks</li>
-              <li>Token issuance, ownership records, and transfer policies</li>
-              <li>Post-issuance monitoring and position-level reporting</li>
-            </ul>
-          </div>
-
-          <div class="service-panel" data-panel="homechain">
-            <h3>HomeChain Store — Property Goods & Services</h3>
-            <p>
-              Our service marketplace unifies property procurement and fulfillment in one governed process.
-              Funded assets can source furniture, equipment, cleaning, and maintenance through standardized
-              pay-to-fulfill-to-settle workflows.
-            </p>
-            <ul>
-              <li>Vendor onboarding and standardized service bundles</li>
-              <li>EST / stablecoin payments with service redemption records</li>
-              <li>Automated multi-party settlement on fulfillment confirmation</li>
-              <li>Trackable quality, fulfillment, and supplier performance data</li>
-            </ul>
-          </div>
-
-          <div class="service-panel" data-panel="stayledger">
-            <h3>StayLedger — Rental & Accommodation Operations</h3>
-            <p>
-              Our operations platform codifies booking, deposits, cancellation logic, payout distribution, and
-              service coordination. It moves assets from financeable to consistently monetized.
-            </p>
-            <ul>
-              <li>Standardized listing and booking operations</li>
-              <li>Deposit escrow and policy-based release mechanisms</li>
-              <li>Automated revenue distribution across all stakeholders</li>
-              <li>Operational data intelligence for long-term asset strategy</li>
-            </ul>
+          <div class="editorial-list">
+            <article class="editorial-item">
+              <h3>Finance needs to unlock the project</h3>
+              <p>
+                The sponsor needs capital to renovate the building, furnish the apartments, install smart devices,
+                and prepare every unit for short-stay operation. Without a clean funding layer, the project never
+                reaches execution.
+              </p>
+            </article>
+            <article class="editorial-item">
+              <h3>Procurement needs to become fulfillment</h3>
+              <p>
+                Once funded, the property still needs furniture packages, smart locks, cleaning support, move-in kits,
+                and staging. EstateX connects funding to real service delivery instead of leaving setup fragmented
+                across disconnected vendors.
+              </p>
+            </article>
+            <article class="editorial-item">
+              <h3>Operations need to create repeatable income</h3>
+              <p>
+                The real test starts after launch. Bookings, deposits, check-in rules, service requests, and payout
+                distribution must stay visible and programmable so the asset can produce recurring operational value.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="journey" class="section" data-reveal>
+      <section id="case" class="section" data-reveal>
+        <div class="shell editorial-split case-layout">
+          <div class="editorial-heading sticky-column">
+            <p class="section-kicker">SkyNest Case Study</p>
+            <h2>One hypothetical project, one complete Web3 property lifecycle.</h2>
+            <p class="case-intro">
+              In the SkyNest scenario, a sponsor converts a building into furnished serviced apartments and uses the
+              EstateX stack from financing to setup to recurring rental monetization.
+            </p>
+            <div class="case-pullquote">
+              <p>
+                EstateX is not only used to fund the project, and not only used to manage bookings. It is used
+                across the full lifecycle of the property.
+              </p>
+            </div>
+          </div>
+          <div class="story-rail">
+            <article class="story-step" data-layer="propfinx" data-reveal>
+              <span class="story-index">01</span>
+              <p class="story-label">Capital Entry</p>
+              <h3>PropFinX raises the capital that makes SkyNest possible.</h3>
+              <p>
+                The sponsor submits the conversion project and financing request to PropFinX. After due diligence,
+                selected financing rights are represented digitally through tokens, and investors complete wallet
+                registration, KYC, AML, and whitelist approval before joining the offering.
+              </p>
+              <p>
+                Smart contracts issue the tokens, record ownership, and apply compliance rules. In practice, this is
+                the stage that funds renovation, furnishing, smart-device installation, and every other downstream
+                step in the SkyNest rollout.
+              </p>
+            </article>
+            <article class="story-step" data-layer="homechain" data-reveal>
+              <span class="story-index">02</span>
+              <p class="story-label">Asset Preparation</p>
+              <h3>HomeChain Store turns funded capital into a usable, service-ready property.</h3>
+              <p>
+                After financing closes, the sponsor uses HomeChain Store to buy furniture packages, smart locks,
+                cleaning, move-in kits, and staging support. Payments can use ecosystem tokens, stablecoins, or other
+                supported methods.
+              </p>
+              <p>
+                Once merchants or providers complete the work, smart contracts can release automated payouts across
+                the merchant, installer, cleaner, logistics provider, and platform operator. The case moves from
+                raised capital to real-world execution.
+              </p>
+            </article>
+            <article class="story-step" data-layer="stayledger" data-reveal>
+              <span class="story-index">03</span>
+              <p class="story-label">Operational Monetization</p>
+              <h3>StayLedger converts prepared apartments into recurring rental income.</h3>
+              <p>
+                Once the building is ready, the serviced apartments are listed on StayLedger so guests can browse,
+                book, and pay. Smart contracts manage booking logic, deposits, cancellation rules, and check-in /
+                check-out conditions.
+              </p>
+              <p>
+                During each stay, the platform can still call cleaning or maintenance through HomeChain Store. After
+                completion, deposits and revenues are distributed automatically among the host, property manager,
+                cleaner, and platform, closing the full operating loop.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="layers" class="section alternate-bg" data-reveal>
         <div class="shell">
-          <header class="section-head">
-            <p>Value Chain</p>
-            <h2>How Our Platform Creates Measurable Commercial Outcomes</h2>
+          <header class="section-head text-center">
+            <p>Platform Layers</p>
+            <h2>SkyNest uses every part of the EstateX stack in sequence.</h2>
+            <p class="lead-center">
+              The strength of the case is not a single feature. It is the continuity between funding, setup, and
+              monetization, with service activity continuing even after launch.
+            </p>
           </header>
-          <div class="timeline">
-            <article>
-              <span>01</span>
-              <h3>Structured Capital Entry</h3>
-              <p>We onboard sponsors, complete due diligence, and issue compliant tokenized financing instruments.</p>
+
+          <div class="lifecycle-grid">
+            <article class="lifecycle-card premium-card is-current" data-layer="propfinx">
+              <div class="card-phase">01 / Foundation</div>
+              <h3>PropFinX</h3>
+              <p class="card-subtitle">Financing the conversion</p>
+              <p class="card-desc">
+                SkyNest starts here. PropFinX structures the funding request, completes due diligence, tokenizes
+                selected financing rights, and creates the compliant capital entry point for the whole project.
+              </p>
+              <ul class="card-features">
+                <li>Sponsor submission, review, and investor onboarding</li>
+                <li>Wallet registration, KYC, AML, and whitelist control</li>
+                <li>Token issuance, ownership records, and transfer rules</li>
+              </ul>
+              <a href="propfinx.html" class="button ghost card-btn">Open PropFinX →</a>
             </article>
-            <article>
-              <span>02</span>
-              <h3>Asset Activation at Scale</h3>
-              <p>We transform funded properties into operational assets through managed procurement and service execution.</p>
+
+            <article class="lifecycle-card premium-card" data-layer="homechain">
+              <div class="card-phase">02 / Activation</div>
+              <h3>HomeChain Store</h3>
+              <p class="card-subtitle">Preparing the apartments</p>
+              <p class="card-desc">
+                The funded building becomes a real product through HomeChain Store. SkyNest uses the marketplace to
+                procure furniture, smart devices, cleaning support, and staging services in one coordinated workflow.
+              </p>
+              <ul class="card-features">
+                <li>Furniture packages, smart locks, and setup services</li>
+                <li>Redemption records linked to physical fulfillment</li>
+                <li>Automated settlement across merchants and operators</li>
+              </ul>
+              <a href="homechain.html" class="button ghost card-btn">Open HomeChain →</a>
             </article>
-            <article>
-              <span>03</span>
-              <h3>Recurring Revenue Operations</h3>
-              <p>We automate booking, deposit, settlement, and payouts to create transparent, repeatable income streams.</p>
+
+            <article class="lifecycle-card premium-card" data-layer="stayledger">
+              <div class="card-phase">03 / Monetization</div>
+              <h3>StayLedger</h3>
+              <p class="card-subtitle">Running the income layer</p>
+              <p class="card-desc">
+                StayLedger is where SkyNest begins generating recurring value. The apartments become bookable assets
+                with programmable booking logic, deposit handling, service coordination, and revenue distribution.
+              </p>
+              <ul class="card-features">
+                <li>Listing, booking, payment, and smart-contract deposits</li>
+                <li>Operational service requests routed back into HomeChain</li>
+                <li>Automated payouts and token-linked guest incentives</li>
+              </ul>
+              <a href="stayledger.html" class="button ghost card-btn">Open StayLedger →</a>
             </article>
           </div>
         </div>
       </section>
 
       <section id="bidi" class="section" data-reveal>
-        <div class="shell bidi-layout">
-          <div class="bidi-intro">
-            <header class="section-head">
-              <p>BIDT Framework</p>
-              <h2>Our Commercial and Technology Framework</h2>
-            </header>
-            <p>
-              We use BIDT to define execution discipline across the company. Each service closes the loop on
-              business value, innovation mechanics, data assets, and technical infrastructure, ensuring strategy
-              is translated into measurable delivery.
+        <div class="shell">
+          <header class="section-head text-center">
+            <p>Framework View</p>
+            <h2>SkyNest shows how strategy becomes an operating system.</h2>
+            <p class="lead-center">
+              Instead of abstract platform language, the BIDT view below explains how each EstateX layer contributes
+              to the business case for one property conversion project.
             </p>
-          </div>
-          <div class="bidi-grid">
-            <article>
-              <h3>Business</h3>
-              <p>Reduce friction and build diversified revenue across issuance, service fulfillment, and operations.</p>
-            </article>
-            <article>
-              <h3>Innovation</h3>
-              <p>Integrate tokenization, compliance, and automated settlement into repeatable enterprise workflows.</p>
-            </article>
-            <article>
-              <h3>Data</h3>
-              <p>Unify sponsor, investor, order, fulfillment, and payout data into a single asset intelligence layer.</p>
-            </article>
-            <article>
-              <h3>Technology</h3>
-              <p>Run execution on one stack: DLT, smart contracts, digital identity, and wallet infrastructure.</p>
-            </article>
+          </header>
+
+          <div class="bidi-container premium-card">
+            <div class="bidi-tabs" role="tablist">
+              <button class="bidi-tab is-active" data-bidi-target="bidi-propfinx">PropFinX</button>
+              <button class="bidi-tab" data-bidi-target="bidi-homechain">HomeChain Store</button>
+              <button class="bidi-tab" data-bidi-target="bidi-stayledger">StayLedger</button>
+            </div>
+
+            <div class="bidi-panels">
+              <div class="bidi-panel is-active" id="bidi-propfinx">
+                <div class="bidi-matrix">
+                  <div class="bidi-item">
+                    <span class="icon-tag">Business</span>
+                    <p>Enables SkyNest to raise the conversion capital needed to move the building from concept into execution.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Innovation</span>
+                    <p>Replaces slow, manual financing structures with programmable issuance, compliance gating, and digital ownership records.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Data</span>
+                    <p>Captures sponsor inputs, investor profiles, wallet details, whitelist status, and token issuance events in one trail.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Technology</span>
+                    <p>Uses blockchain records, smart contracts, digital identity checks, and wallet infrastructure to structure capital entry.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bidi-panel" id="bidi-homechain">
+                <div class="bidi-matrix">
+                  <div class="bidi-item">
+                    <span class="icon-tag">Business</span>
+                    <p>Transforms raised funds into a ready-to-launch apartment product by coordinating vendors, services, and fulfillment.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Innovation</span>
+                    <p>Connects token-supported payment logic with real service redemption and automatic settlement after work completion.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Data</span>
+                    <p>Tracks orders, merchants, service tokens, fulfillment status, and every supplier interaction required to prepare SkyNest.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Technology</span>
+                    <p>Relies on smart-contract settlement, wallet integration, and service-confirmation workflows to bridge digital and physical execution.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bidi-panel" id="bidi-stayledger">
+                <div class="bidi-matrix">
+                  <div class="bidi-item">
+                    <span class="icon-tag">Business</span>
+                    <p>Turns the prepared property into a live revenue engine through repeatable booking activity and recurring operational cash flow.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Innovation</span>
+                    <p>Combines deposits, booking rules, payouts, loyalty benefits, and service coordination inside one programmable operating layer.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Data</span>
+                    <p>Unifies listing, guest, booking, deposit, service request, and payout records so the operating history stays measurable.</p>
+                  </div>
+                  <div class="bidi-item">
+                    <span class="icon-tag">Technology</span>
+                    <p>Uses smart contracts, wallet-linked incentives, and connected service workflows to manage the rental lifecycle end to end.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="cta" class="section" data-reveal>
-        <div class="shell cta">
+        <div class="shell cta premium-card">
           <div>
-            <h2>Looking for a Commercially Ready Web3 Property Platform?</h2>
+            <h2>EstateX makes one property case read like one coherent operating model.</h2>
             <p>
-              Our team builds collaborative, traceable, and scalable infrastructure for institutional investors,
-              developers, and operating partners ready to execute at scale.
+              SkyNest demonstrates how tokenized financing, property-service procurement, and rental operations can
+              behave as one connected business system instead of three disconnected tools.
             </p>
           </div>
           <div class="cta-actions">
-            <a class="button solid" href="mailto:contact@estatex.io">Start a Partnership</a>
-            <a class="button ghost scroll-link" href="#overview">Review Our Solution</a>
+            <a class="button solid" href="mailto:contact@estatex.io">Contact EstateX</a>
+            <a class="button ghost scroll-link" href="#case">Review the Case Study</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="shell footer">
-        <p>EstateX · Institutional Web3 Property Infrastructure</p>
-        <p>© 2026 EstateX</p>
+    <footer class="site-footer site-footer-rich">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-badge">EstateX Case Study</p>
+            <h3>EstateX</h3>
+            <p>
+              Commercial infrastructure for tokenized financing, asset preparation, and rental operations across one
+              connected property lifecycle.
+            </p>
+            <div class="footer-social">
+              <a href="mailto:contact@estatex.io">Email</a>
+              <a href="#case" class="scroll-link">Case Study</a>
+              <a href="#cta" class="scroll-link">Contact</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <div class="footer-links">
+              <a href="#overview" class="scroll-link">Overview</a>
+              <a href="#layers" class="scroll-link">Platform layers</a>
+              <a href="#bidi" class="scroll-link">Framework view</a>
+              <a href="#cta" class="scroll-link">Contact</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Solutions</h4>
+            <div class="footer-links">
+              <a href="propfinx.html">PropFinX</a>
+              <a href="homechain.html">HomeChain Store</a>
+              <a href="stayledger.html">StayLedger</a>
+              <a href="#case" class="scroll-link">SkyNest case study</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Chapters</h4>
+            <div class="footer-links">
+              <a href="propfinx.html#case">Capital structuring</a>
+              <a href="homechain.html#case">Asset preparation</a>
+              <a href="stayledger.html#case">Operating revenue</a>
+              <a href="index.html#layers">Lifecycle view</a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Governance</h4>
+            <div class="footer-links">
+              <a href="propfinx.html#controls">Capital controls</a>
+              <a href="homechain.html#controls">Fulfillment governance</a>
+              <a href="stayledger.html#controls">Operating governance</a>
+              <a href="#bidi" class="scroll-link">BIDT framework</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 EstateX</p>
+          <p>Built around the SkyNest case study.</p>
+        </div>
       </div>
     </footer>
 

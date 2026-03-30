@@ -4,8 +4,10 @@
   const navLinks = Array.from(document.querySelectorAll(".nav a"));
   const scrollLinks = Array.from(document.querySelectorAll(".scroll-link"));
   const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
-  const tabs = Array.from(document.querySelectorAll(".tab"));
-  const panels = Array.from(document.querySelectorAll(".service-panel"));
+  const bidiTabs = Array.from(document.querySelectorAll(".bidi-tab"));
+  const bidiPanels = Array.from(document.querySelectorAll(".bidi-panel"));
+  const storySteps = Array.from(document.querySelectorAll(".story-step"));
+  const layerNodes = Array.from(document.querySelectorAll("[data-layer]"));
   const progress = document.querySelector(".progress");
   const toTop = document.querySelector(".to-top");
 
@@ -40,16 +42,37 @@
     });
   });
 
-  tabs.forEach((tab) => {
+  const setActiveLayer = (layer) => {
+    if (!layer) {
+      return;
+    }
+    layerNodes.forEach((node) => {
+      node.classList.toggle("is-current", node.dataset.layer === layer);
+    });
+  };
+
+  bidiTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      const key = tab.dataset.tab;
-      tabs.forEach((item) => {
-        item.classList.toggle("is-active", item === tab);
-        item.setAttribute("aria-selected", item === tab ? "true" : "false");
+      const target = tab.dataset.bidiTarget;
+      bidiTabs.forEach((t) => {
+        t.classList.toggle("is-active", t === tab);
       });
-      panels.forEach((panel) => {
-        panel.classList.toggle("is-active", panel.dataset.panel === key);
+      bidiPanels.forEach((panel) => {
+        panel.classList.toggle("is-active", panel.id === target);
       });
+    });
+  });
+
+  layerNodes.forEach((node) => {
+    node.addEventListener("mouseenter", () => {
+      if (node.dataset.layer) {
+        setActiveLayer(node.dataset.layer);
+      }
+    });
+    node.addEventListener("focus", () => {
+      if (node.dataset.layer) {
+        setActiveLayer(node.dataset.layer);
+      }
     });
   });
 
@@ -66,6 +89,27 @@
       { threshold: 0.15 }
     );
     revealItems.forEach((item) => observer.observe(item));
+
+    const stepObserver = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((left, right) => right.intersectionRatio - left.intersectionRatio);
+
+        storySteps.forEach((step) => step.classList.remove("is-current"));
+
+        if (visibleEntries[0]?.target) {
+          visibleEntries[0].target.classList.add("is-current");
+
+          if (visibleEntries[0].target.dataset.layer) {
+            setActiveLayer(visibleEntries[0].target.dataset.layer);
+          }
+        }
+      },
+      { threshold: [0.35, 0.6, 0.85], rootMargin: "-12% 0px -30% 0px" }
+    );
+
+    storySteps.forEach((item) => stepObserver.observe(item));
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
@@ -97,6 +141,8 @@
 
   window.addEventListener("scroll", onScroll);
   onScroll();
+  setActiveLayer("propfinx");
+  storySteps[0]?.classList.add("is-current");
 
   if (toTop) {
     toTop.addEventListener("click", () => {
