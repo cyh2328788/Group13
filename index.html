@@ -1,267 +1,241 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EstateX Web3 Property Ecosystem</title>
+    <title>EstateX | Institutional Web3 Property Ecosystem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="progress"></div>
     <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <span class="brand-mark">EX</span>
-          <span class="brand-name">EstateX</span>
-        </div>
+      <div class="shell header-inner">
+        <a class="brand" href="#top">EstateX</a>
         <nav class="nav">
-          <a href="#overview">生态概览</a>
-          <a href="#services">三大服务</a>
-          <a href="#flow">生命周期</a>
-          <a href="#bidi">BIDT</a>
-          <a href="#cta">加入生态</a>
+          <a href="#overview" class="scroll-link">Overview</a>
+          <a href="#services" class="scroll-link">Services</a>
+          <a href="#journey" class="scroll-link">Journey</a>
+          <a href="#bidi" class="scroll-link">BIDT</a>
+          <a href="#cta" class="scroll-link">Partnership</a>
         </nav>
-        <button class="nav-toggle" aria-label="打开导航">菜单</button>
+        <button class="nav-toggle" aria-label="Open navigation">Menu</button>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <p class="eyebrow">Web3 Real Estate Ecosystem</p>
-            <h1>EstateX 让融资、消费与运营成为一体化的链上体验</h1>
+    <main id="top">
+      <section class="hero" data-reveal>
+        <div class="shell hero-grid">
+          <article class="hero-main">
+            <p class="eyebrow">EstateX | Institutional Web3 Property Ecosystem</p>
+            <h1>Our Platform Turns Real Estate into a Structured, Programmable Financial Asset</h1>
             <p class="lead">
-              从代币化融资到物业服务，再到租赁与收益分配，EstateX 打通房地产全生命周期，释放资产
-              流动性与数字化效率。
+              Our solution connects tokenized financing, property services, and rental operations in one integrated
+              operating stack. Instead of isolated products, we deliver a single execution layer for the full
+              lifecycle of real assets.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#services">查看三大服务</a>
-              <a class="button ghost" href="#cta">联系合作</a>
+              <a href="#services" class="button solid scroll-link">Explore the Three Services</a>
+              <a href="#journey" class="button ghost scroll-link">View the Operating Flow</a>
             </div>
-            <div class="hero-metrics">
-              <div>
-                <h3>3</h3>
-                <p>核心服务</p>
-              </div>
-              <div>
-                <h3>1</h3>
-                <p>完整生态闭环</p>
-              </div>
-              <div>
-                <h3>100%</h3>
-                <p>链上可追溯</p>
-              </div>
+            <ul class="hero-meta">
+              <li>Built for institutional investors, developers, and operating partners</li>
+              <li>Compliance controls, smart contracts, and end-to-end traceability by design</li>
+            </ul>
+          </article>
+          <aside class="hero-aside">
+            <svg viewBox="0 0 320 220" aria-hidden="true">
+              <rect x="16" y="28" width="86" height="156" rx="14"></rect>
+              <rect x="118" y="18" width="92" height="166" rx="14"></rect>
+              <rect x="228" y="44" width="76" height="140" rx="14"></rect>
+              <path d="M20 198h286"></path>
+              <path d="M40 98h52M138 82h52M244 114h44"></path>
+            </svg>
+            <div class="aside-note">
+              <p>Our Operating Pattern</p>
+              <h3>Finance → Service → Operation</h3>
+              <ul>
+                <li>Our finance layer structures compliant capital entry</li>
+                <li>Our service layer activates assets for real-world use</li>
+                <li>Our operations layer converts usage into recurring revenue</li>
+              </ul>
             </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="overview" class="section" data-reveal>
+        <div class="shell text-flow">
+          <header class="section-head">
+            <p>Market Problem</p>
+            <h2>Why Our Solution Is Built as a Closed Loop</h2>
+          </header>
+          <p>
+            Traditional property projects face high friction and low liquidity in financing, fragmented procurement
+            and fulfillment in service delivery, and weak transparency in deposits, payouts, and operating data.
+            Together, these constraints reduce asset efficiency and slow value realization.
+          </p>
+          <p>
+            Our platform is not designed as a token experiment. Our architecture places
+            <strong>capital formation</strong>, <strong>service fulfillment</strong>, and
+            <strong>operational monetization</strong> inside one verifiable rule set, where smart contracts
+            turn cross-party coordination into executable workflows.
+          </p>
+          <div class="long-divider"></div>
+          <blockquote>
+            Our commercial thesis is simple: structure capital, activate the asset, and convert operations into durable cash flow.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="services" class="section" data-reveal>
+        <div class="shell">
+          <header class="section-head">
+            <p>Our Services</p>
+            <h2>Three Services, One Institutional Execution Stack</h2>
+          </header>
+          <div class="service-tabs" role="tablist" aria-label="Service switcher">
+            <button class="tab is-active" data-tab="propfinx" aria-selected="true">PropFinX</button>
+            <button class="tab" data-tab="homechain" aria-selected="false">HomeChain Store</button>
+            <button class="tab" data-tab="stayledger" aria-selected="false">StayLedger</button>
           </div>
-          <div class="hero-card">
-            <h2>生态定位</h2>
+
+          <div class="service-panel is-active" data-panel="propfinx">
+            <h3>PropFinX — Web3 Real Estate Finance</h3>
             <p>
-              以真实资产为基础，连接资本、服务与运营，构建可验证、可扩展的 Web3 房地产基础设施。
+              Our finance service tokenizes selected financing rights and embeds compliance checks, issuance logic,
+              custody, and transfer constraints into smart contracts. It gives sponsors and investors a controlled,
+              transparent framework for capital participation.
             </p>
-            <div class="tag-list">
-              <span>资产代币化</span>
-              <span>合规融资</span>
-              <span>服务履约</span>
-              <span>收益分配</span>
-            </div>
+            <ul>
+              <li>Project intake, due diligence, and compliance approval</li>
+              <li>Investor onboarding with KYC / AML / whitelist checks</li>
+              <li>Token issuance, ownership records, and transfer policies</li>
+              <li>Post-issuance monitoring and position-level reporting</li>
+            </ul>
+          </div>
+
+          <div class="service-panel" data-panel="homechain">
+            <h3>HomeChain Store — Property Goods & Services</h3>
+            <p>
+              Our service marketplace unifies property procurement and fulfillment in one governed process.
+              Funded assets can source furniture, equipment, cleaning, and maintenance through standardized
+              pay-to-fulfill-to-settle workflows.
+            </p>
+            <ul>
+              <li>Vendor onboarding and standardized service bundles</li>
+              <li>EST / stablecoin payments with service redemption records</li>
+              <li>Automated multi-party settlement on fulfillment confirmation</li>
+              <li>Trackable quality, fulfillment, and supplier performance data</li>
+            </ul>
+          </div>
+
+          <div class="service-panel" data-panel="stayledger">
+            <h3>StayLedger — Rental & Accommodation Operations</h3>
+            <p>
+              Our operations platform codifies booking, deposits, cancellation logic, payout distribution, and
+              service coordination. It moves assets from financeable to consistently monetized.
+            </p>
+            <ul>
+              <li>Standardized listing and booking operations</li>
+              <li>Deposit escrow and policy-based release mechanisms</li>
+              <li>Automated revenue distribution across all stakeholders</li>
+              <li>Operational data intelligence for long-term asset strategy</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section id="overview" class="section overview">
-        <div class="container">
-          <div class="section-title">
-            <p>生态概览</p>
-            <h2>一个平台覆盖房地产全生命周期</h2>
-          </div>
-          <div class="overview-grid">
-            <div class="overview-card">
-              <h3>融资</h3>
-              <p>PropFinX 将融资权利代币化，提升流动性与透明度。</p>
-            </div>
-            <div class="overview-card">
-              <h3>消费</h3>
-              <p>HomeChain Store 让物业服务可被代币购买与自动结算。</p>
-            </div>
-            <div class="overview-card">
-              <h3>运营</h3>
-              <p>StayLedger 通过智能合约管理租赁与收益分配。</p>
-            </div>
-            <div class="overview-card">
-              <h3>闭环</h3>
-              <p>三大服务共享数据与代币机制，形成持续循环的生态。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section services">
-        <div class="container">
-          <div class="section-title">
-            <p>三大服务</p>
-            <h2>围绕真实物业的三层 Web3 服务</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card">
-              <div class="service-icon">PF</div>
-              <h3>PropFinX</h3>
-              <p class="service-subtitle">Web3 房地产融资平台</p>
-              <ul class="service-list">
-                <li>项目提交与尽调流程数字化</li>
-                <li>KYC / AML 合规准入控制</li>
-                <li>代币化融资权发行与管理</li>
-                <li>二级转让规则智能合约化</li>
-              </ul>
-            </article>
-            <article class="service-card highlight">
-              <div class="service-icon">HC</div>
-              <h3>HomeChain Store</h3>
-              <p class="service-subtitle">Web3 物业商品与服务市场</p>
-              <ul class="service-list">
-                <li>家具、设备与服务套餐上链</li>
-                <li>代币支付与服务凭证铸造</li>
-                <li>履约确认后自动分账</li>
-                <li>为物业运营提供标准化服务</li>
-              </ul>
-            </article>
-            <article class="service-card">
-              <div class="service-icon">SL</div>
-              <h3>StayLedger</h3>
-              <p class="service-subtitle">Web3 租赁与住宿平台</p>
-              <ul class="service-list">
-                <li>房源发布、预订与押金智能管理</li>
-                <li>入住流程与服务订单联动</li>
-                <li>收益自动分配与代币激励</li>
-                <li>全流程链上记录与可审计</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="flow" class="section flow">
-        <div class="container">
-          <div class="section-title">
-            <p>生命周期</p>
-            <h2>从融资到运营的链上路径</h2>
-          </div>
-          <div class="flow-steps">
-            <div class="flow-step">
+      <section id="journey" class="section" data-reveal>
+        <div class="shell">
+          <header class="section-head">
+            <p>Value Chain</p>
+            <h2>How Our Platform Creates Measurable Commercial Outcomes</h2>
+          </header>
+          <div class="timeline">
+            <article>
               <span>01</span>
-              <h3>代币化融资</h3>
-              <p>项目方提交计划并完成合规审查，融资权利被铸造成代币。</p>
-            </div>
-            <div class="flow-step">
+              <h3>Structured Capital Entry</h3>
+              <p>We onboard sponsors, complete due diligence, and issue compliant tokenized financing instruments.</p>
+            </article>
+            <article>
               <span>02</span>
-              <h3>物业服务准备</h3>
-              <p>通过 HomeChain Store 完成设备采购、服务预约与履约交付。</p>
-            </div>
-            <div class="flow-step">
+              <h3>Asset Activation at Scale</h3>
+              <p>We transform funded properties into operational assets through managed procurement and service execution.</p>
+            </article>
+            <article>
               <span>03</span>
-              <h3>运营与收益分配</h3>
-              <p>StayLedger 管理预订、押金与收益分配，形成稳定现金流。</p>
-            </div>
+              <h3>Recurring Revenue Operations</h3>
+              <p>We automate booking, deposit, settlement, and payouts to create transparent, repeatable income streams.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="bidi" class="section bidi">
-        <div class="container bidi-grid">
-          <div>
-            <div class="section-title">
-              <p>BIDT</p>
-              <h2>商业与技术价值统一规划</h2>
-            </div>
-            <p class="lead">
-              EstateX 通过 BIDT 框架对商业价值、创新、数据与技术进行系统设计，确保产品具有可持续
-              扩展能力。
+      <section id="bidi" class="section" data-reveal>
+        <div class="shell bidi-layout">
+          <div class="bidi-intro">
+            <header class="section-head">
+              <p>BIDT Framework</p>
+              <h2>Our Commercial and Technology Framework</h2>
+            </header>
+            <p>
+              We use BIDT to define execution discipline across the company. Each service closes the loop on
+              business value, innovation mechanics, data assets, and technical infrastructure, ensuring strategy
+              is translated into measurable delivery.
             </p>
           </div>
-          <div class="bidi-cards">
-            <div class="bidi-card">
+          <div class="bidi-grid">
+            <article>
               <h3>Business</h3>
-              <p>降低融资与运营成本，提升资产流动性与平台服务收入。</p>
-            </div>
-            <div class="bidi-card">
+              <p>Reduce friction and build diversified revenue across issuance, service fulfillment, and operations.</p>
+            </article>
+            <article>
               <h3>Innovation</h3>
-              <p>代币化、合规准入与自动化结算的组合创新。</p>
-            </div>
-            <div class="bidi-card">
+              <p>Integrate tokenization, compliance, and automated settlement into repeatable enterprise workflows.</p>
+            </article>
+            <article>
               <h3>Data</h3>
-              <p>项目、投资者、订单与履约等全链路数据沉淀。</p>
-            </div>
-            <div class="bidi-card">
+              <p>Unify sponsor, investor, order, fulfillment, and payout data into a single asset intelligence layer.</p>
+            </article>
+            <article>
               <h3>Technology</h3>
-              <p>区块链、智能合约、钱包与数字身份协同支撑。</p>
-            </div>
+              <p>Run execution on one stack: DLT, smart contracts, digital identity, and wallet infrastructure.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="section roadmap">
-        <div class="container">
-          <div class="section-title">
-            <p>路线图</p>
-            <h2>从 MVP 到生态扩展</h2>
-          </div>
-          <div class="roadmap-grid">
-            <div class="roadmap-card">
-              <h3>阶段一</h3>
-              <p>完成 PropFinX 的项目提交、代币发行与合规审查流程。</p>
-            </div>
-            <div class="roadmap-card">
-              <h3>阶段二</h3>
-              <p>上线 HomeChain Store 的服务目录、支付与履约确认。</p>
-            </div>
-            <div class="roadmap-card">
-              <h3>阶段三</h3>
-              <p>整合 StayLedger 预订、结算与代币激励机制。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cta" class="section cta">
-        <div class="container cta-box">
+      <section id="cta" class="section" data-reveal>
+        <div class="shell cta">
           <div>
-            <h2>准备好进入 EstateX 生态了吗？</h2>
-            <p>让真实资产与 Web3 技术结合，打造下一代物业生态。</p>
+            <h2>Looking for a Commercially Ready Web3 Property Platform?</h2>
+            <p>
+              Our team builds collaborative, traceable, and scalable infrastructure for institutional investors,
+              developers, and operating partners ready to execute at scale.
+            </p>
           </div>
           <div class="cta-actions">
-            <a class="button primary" href="#services">获取方案</a>
-            <a class="button ghost" href="mailto:contact@estatex.io">联系团队</a>
+            <a class="button solid" href="mailto:contact@estatex.io">Start a Partnership</a>
+            <a class="button ghost scroll-link" href="#overview">Review Our Solution</a>
           </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <div class="brand">
-            <span class="brand-mark">EX</span>
-            <span class="brand-name">EstateX</span>
-          </div>
-          <p>Web3 Real Estate Ecosystem</p>
-        </div>
-        <div class="footer-links">
-          <a href="#overview">生态概览</a>
-          <a href="#services">三大服务</a>
-          <a href="#flow">生命周期</a>
-          <a href="#bidi">BIDT</a>
-        </div>
-        <div class="footer-note">
-          <p>© 2026 EstateX. All rights reserved.</p>
-        </div>
+      <div class="shell footer">
+        <p>EstateX · Institutional Web3 Property Infrastructure</p>
+        <p>© 2026 EstateX</p>
       </div>
     </footer>
 
+    <button class="to-top" aria-label="Back to top">↑</button>
     <script src="app.js"></script>
   </body>
 </html>
