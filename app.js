@@ -8,6 +8,13 @@
   const bidiPanels = Array.from(document.querySelectorAll(".bidi-panel"));
   const storySteps = Array.from(document.querySelectorAll(".story-step"));
   const layerNodes = Array.from(document.querySelectorAll("[data-layer]"));
+  const motionVideos = Array.from(document.querySelectorAll(".showcase-video"));
+  const showcase = document.querySelector("[data-video-showcase]");
+  const showcaseStageVideo = showcase?.querySelector("[data-stage-video]");
+  const showcaseStageKicker = showcase?.querySelector("[data-stage-kicker]");
+  const showcaseStageTitle = showcase?.querySelector("[data-stage-title]");
+  const showcaseStageProgress = showcase?.querySelector("[data-stage-progress]");
+  const showcaseChips = showcase ? Array.from(showcase.querySelectorAll(".video-chip")) : [];
   const progress = document.querySelector(".progress");
   const toTop = document.querySelector(".to-top");
 
@@ -76,6 +83,109 @@
     });
   });
 
+  const playVideo = (video) => {
+    if (!video) {
+      return;
+    }
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {});
+    }
+  };
+
+  const updateStageProgress = () => {
+    if (!showcaseStageVideo || !showcaseStageProgress) {
+      return;
+    }
+    const duration = showcaseStageVideo.duration;
+    const current = showcaseStageVideo.currentTime;
+    const ratio = Number.isFinite(duration) && duration > 0 ? Math.min(current / duration, 1) : 0;
+    showcaseStageProgress.style.width = `${ratio * 100}%`;
+  };
+
+  const applyShowcaseChip = (chip) => {
+    if (!chip || !showcaseStageVideo) {
+      return;
+    }
+    const source = chip.dataset.videoSrc;
+    const kicker = chip.dataset.videoKicker;
+    const title = chip.dataset.videoTitle;
+
+    showcaseChips.forEach((item) => {
+      item.classList.toggle("is-active", item === chip);
+    });
+
+    if (showcaseStageKicker && kicker) {
+      showcaseStageKicker.textContent = kicker;
+    }
+
+    if (showcaseStageTitle && title) {
+      showcaseStageTitle.textContent = title;
+    }
+
+    if (source && showcaseStageVideo.getAttribute("src") !== source) {
+      showcaseStageVideo.classList.add("is-switching");
+      showcaseStageVideo.setAttribute("src", source);
+      showcaseStageVideo.load();
+      showcaseStageVideo.addEventListener(
+        "loadeddata",
+        () => {
+          showcaseStageVideo.classList.remove("is-switching");
+          playVideo(showcaseStageVideo);
+          updateStageProgress();
+        },
+        { once: true }
+      );
+    } else {
+      playVideo(showcaseStageVideo);
+      updateStageProgress();
+    }
+  };
+
+  let showcaseRotationTimer = null;
+  const startShowcaseRotation = () => {
+    if (!showcase || showcaseChips.length < 2) {
+      return;
+    }
+    if (showcaseRotationTimer) {
+      clearInterval(showcaseRotationTimer);
+    }
+    showcaseRotationTimer = setInterval(() => {
+      const activeIndex = showcaseChips.findIndex((chip) => chip.classList.contains("is-active"));
+      const nextIndex = activeIndex >= 0 ? (activeIndex + 1) % showcaseChips.length : 0;
+      applyShowcaseChip(showcaseChips[nextIndex]);
+    }, 5200);
+  };
+
+  showcaseChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      applyShowcaseChip(chip);
+      startShowcaseRotation();
+    });
+  });
+
+  if (showcaseStageVideo) {
+    showcaseStageVideo.addEventListener("timeupdate", updateStageProgress);
+    showcaseStageVideo.addEventListener("loadedmetadata", updateStageProgress);
+    showcaseStageVideo.addEventListener("play", updateStageProgress);
+  }
+
+  if (showcase) {
+    showcase.addEventListener("mouseenter", () => {
+      if (showcaseRotationTimer) {
+        clearInterval(showcaseRotationTimer);
+      }
+    });
+    showcase.addEventListener("mouseleave", () => {
+      startShowcaseRotation();
+    });
+  }
+
+  if (showcaseChips[0]) {
+    applyShowcaseChip(showcaseChips.find((chip) => chip.classList.contains("is-active")) || showcaseChips[0]);
+    startShowcaseRotation();
+  }
+
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -110,8 +220,24 @@
     );
 
     storySteps.forEach((item) => stepObserver.observe(item));
+
+    const videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            playVideo(entry.target);
+          } else if (!entry.target.paused) {
+            entry.target.pause();
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    motionVideos.forEach((video) => videoObserver.observe(video));
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
+    motionVideos.forEach((video) => playVideo(video));
   }
 
   const sections = navLinks
